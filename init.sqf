@@ -38,7 +38,7 @@ if (!isDedicated) then
 	{
 		if (hasInterface) then // Normal player
 		{
-			9999 cutText ["Welcome to A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
+			9999 cutText ["Welcome to 40-1 A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
 
 			waitUntil {!isNull player};
 			removeAllWeapons player;
@@ -69,7 +69,11 @@ if (isServer) then
 };
 
 //init 3rd Party Scripts
-[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
+[] execVM "addons\R3F_LOG\init.sqf";
 [] execVM "addons\proving_ground\init.sqf";
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
+[] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
+[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+[] execVM "addons\scripts\zlt_fastrope.sqf";			// fastrope from helicopters
+[] execVM "addons\scripts\intro.sqf";					// Welcome intro
